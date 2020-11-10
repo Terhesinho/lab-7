@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> EU </title>
+<style>
+body{background-color:beige;}
+h1{color:grey;
+   font-family:arial;
+   font-style:bold;
+   text-align:center;}
+h2,h3,h4,h5,h6 {color:orange;
+   font-family:Times New Roman;}
+p{color:maroon;
+  font-family:calibri;}
+table, tr, td, ul{border: 3px solid black;}
+table{background-color: yellow;}
+ul{background-color: white;}
+li{color:green;}
+img{border: 2 px solid black;
+    width:300px;
+    border-radius:10px;}
+#catalog{color:#8B0000;
+        font-family:georgia;
+        font-style:bold;}
+a{font-style:italic;}
+</style>
+<script>
+function aDoua()
+   {
+   document.getElementById("Titlu").innerHTML = "Elev"
+   document.getElementById("nUme") .innerHTML ="Terheș Andrei"
+   document.getElementById("poza2").src="https://i.postimg.cc/vTVrXgkh/13327374-671743642991467-3843469013733468353-n.jpg"
+   document.getElementById("asteptari") .innerHTML ="Nu stiu, doar voiam sa iau nota mare la examen"
+   document.body.style.backgroundColor = "Purple";
+   document.getElementById("poza2").style.opacity="0.9";
+   document.getElementById("materie1").innerHTML="Pauza"
+   document.getElementById("materie2").innerHTML="Matematica"
+   document.getElementById("materie3").innerHTML="Fizica"
+   var tabelEd=document.getElementById("tabel");
+   tabelEd.rows[0].cells[0].innerHTML="Scoala Gimnaziala nr. 8 Constanta";
+   tabelEd.rows[0].cells[1].innerHTML="2008-2016";
+   tabelEd.rows[0].cells[2].innerHTML="Elev";
+   tabelEd.rows[1].innerHTML=""
+}
+function buton() 
+  {
+  var x = document.getElementById("myEmail").value;
+  document.getElementById("demo").innerHTML = x;
+  }
+function anNastere()
+{
+var azi=new Date;
+   var ani;
+   var lma= document.getElementById("varsta").innerHTML;
+   ani=azi.getFullYear()-parseInt(lma);
+   document.getElementById("varsta").innerHTML=ani;
+   }
+</script>
+</head>
+<body>
+<h1 id="Titlu"> Eu </h1>
+<h3> Date de identificare a persoanei: </h3> <p id="nUme"> Terheș Răzvan-Andrei  </p>
+<h3> Date de contact: </h3><br> E-mail: <input type="email" id="myEmail" value="andrei.terhes@yahoo.com">
+<button onclick="buton()">Apasa</button>
+<p id="demo"></p>
+<h3> An nastere: </h3>
+<p onmouseover="anNastere()" id="varsta">2001</p><br>
+<br>
+<img id="poza2" src="https://i.postimg.cc/0j0b3LZq/io.jpg" width="275" height="320">
+<h3>Citat reprezentativ pentru așteptările legate de educație:</h3> <p id="asteptari"> Să trec anul </p>
+<h3>Discipline: </h3>
+<ul>
+<li id="materie1"> Programarea calculatoarelor: <a href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/04.pdf">Programare</a></li>
+<li id="materie2"> Componente si circuite electronice pasive: <a href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/05.pdf"> CCP </a></li>
+<li id="materie3"> Informatica aplicata: <a href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/06.pdf"> IA </a></li>
+</ul>
+<h3>Educatie:</h3>
+<table id="tabel">
+<tr><td> UTCN </td><td> 2020-</td><td> Student </td></tr>
+<tr><td> Liceul Teoretic Decebal Constanta </td><td> 2016-2020 </td><td> Bacalaureat </td></tr>
+</table>
+<h3>Hobby-uri: </h3>
+<ul>
+<li> Seriale </li>
+<li> Fotbal </li>
+<li> Nu-mi mai vin la ora asta </li>
+</ul> 
+<button onclick="aDoua()"> Urmatorul capitol </button><br>
+<a href="catalog.html"> Inapoi la pagina principala </a>
+</body>
+</html>
